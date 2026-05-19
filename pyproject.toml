@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pbg-idynomics2"
+version = "0.1.0"
+description = "Process-bigraph wrapper for IDynoMiCS 2.0, the individual-based biofilm simulator"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Eran Agmon", email = "agmon.eran@gmail.com"}]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "bigraph-schema>=0.0.60",
+    "process-bigraph>=0.0.66",
+    "JPype1>=1.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "bigraph-viz>=0.0.30",
+    "plotly>=5",
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/vivarium-collective/pbg-idynomics2"
+Issues = "https://github.com/vivarium-collective/pbg-idynomics2/issues"
+Upstream = "https://github.com/kreft/iDynoMiCS-2"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pbg_idynomics2"]
