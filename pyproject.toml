@@ -18,7 +18,11 @@ classifiers = [
 dependencies = [
     "bigraph-schema>=0.0.60",
     "process-bigraph>=0.0.66",
-    "JPype1>=1.5.0",
+    # Pin <1.7: JPype 1.7+ dropped universal2 macOS wheels and ships only
+    # x86_64, which forces a source build (needing ant) on Apple Silicon
+    # and on any uv fresh resolve. 1.6.0 has cp3{10..13}-universal2 wheels
+    # that cover both arm64 and x86_64.
+    "JPype1>=1.5.0,<1.7",
     "bigraph-viz>=2.0.3",
     "pyyaml>=6.0",
     "jsonschema[format-nongpl]>=4.21",
