@@ -46,4 +46,8 @@ Upstream = "https://github.com/kreft/iDynoMiCS-2"
 packages = ["pbg_idynomics2"]
 
 [tool.uv.sources]
-vivarium-dashboard = { path = "/Users/eranagmon/code/vivarium-dashboard", editable = true }
+# vivarium-dashboard isn't on PyPI; pull it from the public GitHub repo so
+# CI (and any fresh clone) can resolve it.  Override locally with a personal
+# `pyproject.toml` edit pointing at `path = "../vivarium-dashboard"` if you
+# want an editable install for dashboard development.
+vivarium-dashboard = { git = "https://github.com/vivarium-collective/vivarium-dashboard", branch = "main" }
