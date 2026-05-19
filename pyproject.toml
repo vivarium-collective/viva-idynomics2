@@ -19,6 +19,14 @@ dependencies = [
     "bigraph-schema>=0.0.60",
     "process-bigraph>=0.0.66",
     "JPype1>=1.5.0",
+    "bigraph-viz>=2.0.3",
+    "pyyaml>=6.0",
+    "jsonschema[format-nongpl]>=4.21",
+    "jinja2>=3.1",
+    "pypdf>=4.0",
+    "matplotlib",
+    "plotly",
+    "vivarium-dashboard",
 ]
 
 [project.optional-dependencies]
@@ -36,3 +44,6 @@ Upstream = "https://github.com/kreft/iDynoMiCS-2"
 
 [tool.hatch.build.targets.wheel]
 packages = ["pbg_idynomics2"]
+
+[tool.uv.sources]
+vivarium-dashboard = { path = "/Users/eranagmon/code/vivarium-dashboard", editable = true }

@@ -12,3 +12,22 @@ results/
 .idea/
 *.log
 demo/_data/
+
+
+# Added by pbg-superpowers in-place scaffolder
+.pbg/server/
+.pbg/state.json
+.pbg/composite-runs.db
+.pbg/runs/
+.pbg/study-test-results/
+investigations/*/runs.db
+investigations/*/viz/
+investigations/*/.run.lock
+.pbg/viz-requests/
+.pbg/viz-responses/
+.pbg/agent-requests/
+.pbg/agent-responses/
+.pbg/visualizations-staged/
+reports/assets/*
+!reports/assets/.keep
+.superpowers/brainstorm/
