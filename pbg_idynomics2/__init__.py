@@ -2,10 +2,13 @@
 
 from .processes import IDynoMiCS2Process
 from . import jvm, runtime, composites
+from .composites import idynomics2_biofilm, idynomics2_chemostat
 
 __all__ = [
     "IDynoMiCS2Process",
     "jvm",
     "runtime",
     "composites",
+    "idynomics2_biofilm",
+    "idynomics2_chemostat",
 ]
