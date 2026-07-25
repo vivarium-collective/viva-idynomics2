@@ -19,7 +19,7 @@ def _jvm_available() -> bool:
 
 def test_generator_is_registered():
     """The @composite_generator decorator should register the function in _REGISTRY."""
-    from pbg_superpowers.composite_generator import _REGISTRY
+    from viva_superpowers.composite_generator import _REGISTRY
     matches = [eid for eid in _REGISTRY if eid.endswith(".idynomics2_biofilm")]
     assert matches, (
         "idynomics2_biofilm not in composite-generator registry; "
